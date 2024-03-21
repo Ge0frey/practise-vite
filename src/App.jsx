@@ -1,4 +1,5 @@
 import ClickEvent from "./functionClick"
+import ClassClick from "./classClick"
 
 const Hello = ({name, age }) => {
 
@@ -25,6 +26,7 @@ const App = () => {
       <Hello name = "Maya" age = {26+10} />
       <Hello name = {name} age = {age}/>  
       <ClickEvent />
+      <ClassClick />
     </div>
   )
 }
