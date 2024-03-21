@@ -1,12 +1,15 @@
-const Hello = (props) => {
+import ClickEvent from "./functionClick"
+
+const Hello = ({name, age }) => {
+
   const bornYear = () => {
     const yearNow = new Date().getFullYear()
-    return yearNow - props.age
+    return yearNow - age
   }
-  
+
   return (
     <>
-      <p>Hello my name is {props.name} and I am {props.age} years old</p>
+      <p>Hello my name is {name} and I am {age} years old</p>
       <p>So you were probably born in {bornYear()}</p>
     </>
   )
@@ -21,6 +24,7 @@ const App = () => {
       <h1>GREETINGS</h1>
       <Hello name = "Maya" age = {26+10} />
       <Hello name = {name} age = {age}/>  
+      <ClickEvent />
     </div>
   )
 }
